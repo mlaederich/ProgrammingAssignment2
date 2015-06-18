@@ -2,7 +2,7 @@
 ## functions do
 
 
-## This function creates a "matrix" object that can cashe its inverse.
+## This function creates a "matrix" objects that can cashe its inverse.
 ## It stores a list of functions.
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -28,7 +28,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## If the inverse has already been calcuated, 
 ##then this funtion will retireve the inverse of the matrix from the cache.
 
-cacheSolve <- function(x, ...) {
+cacheSolve <- function(x) {
         ## Return a matrix that is the inverse of 'x'
   m <- x$getinverse()
   if(!is.null(m)) {
@@ -36,7 +36,7 @@ cacheSolve <- function(x, ...) {
     return(m)
   }
   data <- x$get()
-  m <- solve(data, ...)
+  m <- solve(data)
   x$setinverse(m)
   m
 }
