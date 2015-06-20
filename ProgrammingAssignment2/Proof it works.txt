@@ -1,5 +1,4 @@
-
-##I tested for accuracy usingthe following code.
+##I tested for accuracy using the following code.
 ## It works!
 
 > m <- matrix(c(-1, -2, 1, 1), 2, 2)
